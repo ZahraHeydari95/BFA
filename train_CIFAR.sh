@@ -7,17 +7,17 @@ echo "Current host is: $HOST"
 # Automatic check the host and configure
 case $HOST in
 "alpha")
-    PYTHON="/home/elliot/anaconda3/envs/pytorch041/bin/python" # python environment path
-    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch041/bin/tensorboard' # tensorboard environment path
-    data_path='/home/elliot/data/pytorch/cifar10'
+    TENSORBOARD='/usr/local/bin/tensorboard' # tensorboard environment path
+    data_path='/content/data/cifar-10-batches-py'
     ;;
 esac
 
 DATE=`date +%Y-%m-%d`
 
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir ./save/${DATE}/
-fi
+mkdir save
+cd save 
+mkdir ${DATE}
+cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
@@ -35,7 +35,7 @@ tb_path=${save_path}/tb_log  #tensorboard log path
 
 ############### Neural network ############################
 {
-$PYTHON main.py --dataset ${dataset} \
+python main.py --dataset ${dataset} \
     --data_path ${data_path}   \
     --arch ${model} --save_path ${save_path} \
     --epochs ${epochs} --learning_rate 0.1 \
