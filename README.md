@@ -1,13 +1,10 @@
-> This repository is modified from prior [repository](https://github.com/elliothe/Neural_Network_Weight_Attack ) of ICCV-2019, which includes defense codes and other codes for profiling purpose. 
-  
 #  Bit-Flips Attack and Defense
   
   
 ![BFA](assets/BFA.jpg?raw=true "Bit Flip Attack")
   
 This repository constains a Pytorch implementation of BFA and its defense as discussed in the papers:
-  
-* "[Bit-Flip Attack: Crushing Neural Network with Progressive Bit Search](http://openaccess.thecvf.com/content_ICCV_2019/papers/Rakin_Bit-Flip_Attack_Crushing_Neural_Network_With_Progressive_Bit_Search_ICCV_2019_paper.pdf )", which is published in [ICCV-2019](http://iccv2019.thecvf.com/ ).
+
 *  "[Defending and Harnessing the Bit-Flip based Adversarial Weight Attack]( )", which is published in [CVPR-2020](http://cvpr2020.thecvf.com/ ).
   
 If you find this project useful to you, please cite [our work](http://openaccess.thecvf.com/content_ICCV_2019/papers/Rakin_Bit-Flip_Attack_Crushing_Neural_Network_With_Progressive_Bit_Search_ICCV_2019_paper.pdf ):
