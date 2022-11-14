@@ -7,17 +7,17 @@ echo "Current host is: $HOST"
 # Automatic check the host and configuration
 case $HOST in
 "alpha")
-    PYTHON="/home/elliot/anaconda3/envs/pytorch041/bin/python" # python environment path
-    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch041/bin/tensorboard' # tensorboard environment path
-    data_path='/home/elliot/data/imagenet' # dataset path
+    TENSORBOARD='/usr/local/bin/tensorboard' # tensorboard environment path
+    data_path='/content/data/cifar-10-batches-py'
     ;;
 esac
 
 DATE=`date +%Y-%m-%d`
 
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir ./save/${DATE}/
-fi
+mkdir save
+cd save 
+mkdir ${DATE}
+cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
