@@ -11,18 +11,17 @@ echo "Current host is: $HOST"
 # Automatic check the host and configure
 case $HOST in
 "alpha")
-    PYTHON="/home/elliot/anaconda3/envs/pytorch041/bin/python" # python environment path
-    TENSORBOARD='/home/elliot/anaconda3/envs/pytorch041/bin/tensorboard' # tensorboard environment path
-    # data_path='/home/elliot/data/imagenet' # dataset path
-    data_path='/home/elliot/data/pytorch/cifar10'
+    TENSORBOARD='/usr/local/bin/tensorboard' # tensorboard environment path
+    data_path='/content/data/cifar-10-batches-py'
     ;;
 esac
 
 DATE=`date +%Y-%m-%d`
 
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir ./save/${DATE}/
-fi
+mkdir save
+cd save 
+mkdir ${DATE}
+cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
@@ -44,7 +43,7 @@ save_path=./save/${DATE}/${dataset}_${model}_${label_info}
 tb_path=./save/${DATE}/${dataset}_${model}_${label_info}/tb_log  #tensorboard log path
 
 # set the pretrained model path
-pretrained_model=/home/elliot/Documents/CVPR_2020/BFA_defense/BFA_defense/save/2019-11-12/cifar10_vanilla_resnet20_160_SGD_idx_1/model_best.pth.tar
+pretrained_model=/content/BFA/save/2022-11-14/cifar10_resnet20_quan_1_SGD_binarized/checkpoint.pth.tar
   #tensorboard log path
 
 ############### Neural network ############################
