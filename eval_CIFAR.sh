@@ -48,7 +48,7 @@ pretrained_model=/content/BFA/save/2022-11-14/cifar10_resnet20_quan_1_SGD_binari
 
 ############### Neural network ############################
 {
-$PYTHON main.py --dataset ${dataset} \
+python main.py --dataset ${dataset} \
     --data_path ${data_path}   \
     --arch ${model} --save_path ${save_path} \
     --epochs ${epochs} --learning_rate 0.1 \
