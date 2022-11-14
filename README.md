@@ -7,28 +7,6 @@ This repository constains a Pytorch implementation of BFA and its defense as dis
 
 *  "[Defending and Harnessing the Bit-Flip based Adversarial Weight Attack]( )", which is published in [CVPR-2020](http://cvpr2020.thecvf.com/ ).
   
-##  Table of Contents
-  
-  
-- [Bit-Flips Attack and Defense](#bit-flips-attack-and-defense )
-  - [Table of Contents](#table-of-contents )
-  - [Introduction](#introduction )
-  - [Dependencies](#dependencies )
-  - [Usage](#usage )
-    - [1. Configurations](#1-configurations )
-    - [2. Perform the BFA](#2-perform-the-bfa )
-      - [2.1 Attack on the model trained in floating-point.](#21-attack-on-the-model-trained-in-floating-point )
-        - [Example of ResNet-18 on ImageNet](#example-of-resnet-18-on-imagenet )
-        - [What if I want to attack another Network architecture?](#what-if-i-want-to-attack-another-network-architecture )
-        - [How to perform random bit-flips on a given model?](#how-to-perform-random-bit-flips-on-a-given-model )
-      - [2.2 Training-based BFA defense](#22-training-based-bfa-defense )
-        - [Binarization-aware training](#binarization-aware-training )
-        - [Piecewise Weight Clustering](#piecewise-weight-clustering )
-  - [Misc](#misc )
-    - [Model quantization](#model-quantization )
-    - [Bit Flipping](#bit-flipping )
-  - [License](#license )
-  
 ##  Introduction
   
   
@@ -40,8 +18,7 @@ This repository includes a Bit-Flip Attack (BFA) algorithm which search and iden
 * Python 3.6 (Anaconda)
 * [Pytorch](https://pytorch.org/ ) >=1.01
 * [TensorboardX](https://github.com/lanpa/tensorboardX ) 
-  
-For more specific dependency, please refer [environment.yml](./environment.yml ) and [environment_setup.md](./docs/environment_setup.md )
+
   
 ##  Usage
   
