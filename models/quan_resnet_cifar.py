@@ -134,6 +134,13 @@ class CifarResNet(nn.Module):
         x = x.view(x.size(0), -1)
         return self.classifier(x)
 
+def resnet18_quan(num_classes=10):
+    """Constructs a ResNet-18 model for CIFAR-10 (by default)
+  Args:
+    num_classes (uint): number of classes
+  """
+    model = CifarResNet(ResNetBasicblock, 18, num_classes)
+    return model 
 
 def resnet20_quan(num_classes=10):
     """Constructs a ResNet-20 model for CIFAR-10 (by default)
