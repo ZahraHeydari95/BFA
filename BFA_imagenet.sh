@@ -34,7 +34,7 @@ tb_path=${save_path}/tb_log  #tensorboard log path
 
 ############### Neural network ############################
 {
-$PYTHON main.py --dataset ${dataset} \
+python main.py --dataset ${dataset} \
     --data_path ${data_path}   \
     --arch ${model} --save_path ${save_path}  \
     --test_batch_size ${test_batch_size} --workers 8 --ngpu 1 --gpu_id 1 \
