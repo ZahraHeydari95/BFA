@@ -144,7 +144,7 @@ import torch.nn.functional as F
 #
 
 
- class _bin_func(torch.autograd.Function):
+class _bin_func(torch.autograd.Function):
 
      @staticmethod
      def forward(ctx, input, mu):
@@ -160,10 +160,10 @@ import torch.nn.functional as F
          grad_input = grad_output.clone()/ctx.mu
          return grad_input, None
     
- quantize = _bin_func.apply
+quantize = _bin_func.apply
 
 
- class quan_Conv2d(nn.Conv2d):
+class quan_Conv2d(nn.Conv2d):
      def __init__(self,
                   in_channels,
                   out_channels,
@@ -235,7 +235,7 @@ import torch.nn.functional as F
          # enable the flag, thus now computation does not invovle weight quantization
          self.inf_with_weight = True
 
- class quan_Linear(nn.Linear):
+class quan_Linear(nn.Linear):
      def __init__(self, in_features, out_features, bias=True):
          super(quan_Linear, self).__init__(in_features, out_features, bias=bias)
          self.N_bits = 1
