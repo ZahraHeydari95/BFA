@@ -561,7 +561,7 @@ def perform_attack(attacker, model, model_clean, train_loader, test_loader,
     # attempt to use the training data to conduct BFA
     for _, (data, target) in enumerate(train_loader):
         if args.use_cuda:
-            target = target.cuda(async=True)
+            target = target.cuda(non_blocking=True)
             data = data.cuda()
         # Override the target to prevent label leaking
         _, target = model(data).data.max(1)
@@ -695,7 +695,7 @@ def train(train_loader, model, criterion, optimizer, epoch, log):
 
         if args.use_cuda:
             target = target.cuda(
-                async=True
+                non_blocking=True
             )  # the copy will be asynchronous with respect to the host.
             input = input.cuda()
 
@@ -754,7 +754,7 @@ def validate(val_loader, model, criterion, log, summary_output=False):
     with torch.no_grad():
         for i, (input, target) in enumerate(val_loader):
             if args.use_cuda:
-                target = target.cuda(async=True)
+                target = target.cuda(non_blocking=True)
                 input = input.cuda()
 
             # compute output
