@@ -35,7 +35,7 @@ save_path=./save/${DATE}/${dataset}_${model}_${label_info}
 tb_path=${save_path}/tb_log  #tensorboard log path
 
 # set the pretrained model path
-pretrained_model=/content/BFA/save/{DATE}/cifar10_resnet20_quan_160_SGD_binarized/model_best.pth.tar
+pretrained_model=/content/BFA/save/2022-11-14/cifar10_resnet20_quan_1_SGD_binarized/checkpoint.pth.tar
 
 ############### Neural network ############################
 COUNTER=0
