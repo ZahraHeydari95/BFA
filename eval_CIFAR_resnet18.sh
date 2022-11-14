@@ -21,8 +21,8 @@ cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
-model=mobilenet_v2
-dataset=imagenet
+model=resnet18
+dataset=cifar10
 test_batch_size=256
 
 save_path=./save/${DATE}/${dataset}_${model}_eval/
@@ -31,7 +31,7 @@ tb_path=${save_path}/tb_log  #tensorboard log path
 
 ############### Neural network ############################
 {
-$PYTHON main.py --dataset ${dataset} \
+python main.py --dataset ${dataset} \
     --data_path ${data_path}   \
     --arch ${model} --save_path ${save_path} \
     --test_batch_size ${test_batch_size} \
