@@ -7,25 +7,6 @@ This repository constains a Pytorch implementation of BFA and its defense as dis
 
 *  "[Defending and Harnessing the Bit-Flip based Adversarial Weight Attack]( )", which is published in [CVPR-2020](http://cvpr2020.thecvf.com/ ).
   
-If you find this project useful to you, please cite [our work](http://openaccess.thecvf.com/content_ICCV_2019/papers/Rakin_Bit-Flip_Attack_Crushing_Neural_Network_With_Progressive_Bit_Search_ICCV_2019_paper.pdf ):
-  
-```bibtex
-@inproceedings{he2019bfa,
- title={Bit-Flip Attack: Crushing Neural Network with Progressive Bit Search},
- author={Adnan Siraj Rakin and He, Zhezhi and Fan, Deliang},
- booktitle={Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
- pages={1211-1220},
- year={2019}
-}
-  
-@inproceedings{he2020defend,
- title={Defending and Harnessing the Bit-Flip based Adversarial Weight Attack},
- author={He, Zhezhi and Rakin, Adnan Siraj and Li, Jingtao and Chakrabarti, Chaitali and Fan, Deliang},
- booktitle={Proceedings of the IEEE International Conference on Computer Vision (CVPR)},
- year={2019}
-}
-```
-  
 ##  Table of Contents
   
   
