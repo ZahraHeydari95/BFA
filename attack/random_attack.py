@@ -4,7 +4,6 @@ from models.quantization import quan_Conv2d, quan_Linear, quantize
 import operator
 from attack.data_conversion import *
 
-
 class random_flip(object):
     def __init__(self, model):
         self.module_list = []
