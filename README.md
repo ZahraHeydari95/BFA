@@ -1,8 +1,8 @@
-# Defending and Harnessing the Bit-Flip based Adversarial Weight Attack
-# CVPR2020 paper
+## Defending and Harnessing the Bit-Flip based Adversarial Weight Attack
+## CVPR2020 paper
 
-# Implemented with changes on google colab by zahra heydari
-# IPM
+## Implemented with changes on google colab by zahra heydari
+## IPM
 
 
 
