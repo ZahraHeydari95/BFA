@@ -21,9 +21,9 @@ cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
-model=resnet20_quan
+model=resnet18_quan
 dataset=cifar10
-epochs=160
+epochs=10
 train_batch_size=128
 test_batch_size=128
 optimizer=SGD
