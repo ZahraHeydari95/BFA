@@ -4,7 +4,6 @@ from models.quantization import quan_Conv2d, quan_Linear, quantize
 import operator
 from attack.data_conversion import *
 
-
 class BFA(object):
     def __init__(self, criterion, model, k_top=10):
 
