@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
 
-################# NOTE #############
-# This script is used for observation-x in paper
-
-
 ############### Host   ##############################
 HOST=$(hostname)
 echo "Current host is: $HOST"
@@ -25,9 +21,9 @@ cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
-model=vanilla_resnet20
+model=resnet18_quan
 dataset=cifar10
-epochs=160
+epochs=10
 train_batch_size=128
 test_batch_size=100
 optimizer=SGD
@@ -43,7 +39,7 @@ save_path=./save/${DATE}/${dataset}_${model}_${label_info}
 tb_path=./save/${DATE}/${dataset}_${model}_${label_info}/tb_log  #tensorboard log path
 
 # set the pretrained model path
-pretrained_model=/content/BFA/save/2022-11-14/cifar10_resnet20_quan_1_SGD_binarized/checkpoint.pth.tar
+pretrained_model=/content/BFA/save/2022-11-15/cifar10_resnet18_quan_10_SGD_PC/checkpoint.pth.tar
   #tensorboard log path
 
 ############### Neural network ############################
