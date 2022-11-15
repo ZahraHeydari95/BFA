@@ -21,7 +21,7 @@ cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
-model=resnet20_quan
+model=resnet18_quan
 dataset=cifar10
 test_batch_size=128
 
