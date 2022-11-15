@@ -1,7 +1,6 @@
 import torch
 from models.quantization import quan_Conv2d, quan_Linear
 
-
 def int2bin(input, num_bits):
     '''
     convert the signed integer value into unsigned integer (2's complement equivalently).
