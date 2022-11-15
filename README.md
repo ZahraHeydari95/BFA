@@ -5,6 +5,8 @@
 ## IPM
 
 
+You can from this link, run code on google colab :
+https://github.com/ZahraHeydari95/BFA/blob/paper_branch/Bit_Flip_based_Adversarial_Weight_Attack.ipynb
 
 #  Bit-Flips Attack and Defense
 
@@ -62,7 +64,7 @@ $ bash BFA_imagenet.sh
 #####  How to perform random bit-flips on a given model?
   
   
-The random attack is performed on all the possible weight bit (regardless MSB to LSB). Take the above MobileNet-v2 as example, you just need to add another line to enable the random bit flip `--random_bfa` in `BFA_imagent.sh`:
+The random attack is performed on all the possible weight bit (regardless MSB to LSB). You just need to add another line to enable the random bit flip `--random_bfa` in `BFA_imagent.sh`:
 ```bash
     ...
     --attack_sample_size ${attack_sample_size} \
@@ -76,9 +78,9 @@ The random attack is performed on all the possible weight bit (regardless MSB to
 #####  Binarization-aware training
   
   
-Taken the ResNet-20 on CIFAR-10 as example:
+Taken the ResNet-18 on CIFAR-10 as example:
   
-1. Define a binarized ResNet20 in `models/quan_resnet_cifar.py`.
+1. Define a binarized ResNet18 in `models/quan_resnet_cifar.py`.
 2. To use the weight binariztaion function. Comment out multi-bit quantization. (copy file quantization-binariztaion.py from models folder in quantization.py)
 3. Perform the model training, where the binarized model is initialized in `models/__init__.py` as `resnet18_quan`. Then run `bash train_CIFAR.sh`  in terminal (Don't forget the path configuration!).
   
@@ -102,11 +104,4 @@ Then train the model by `bash train_CIFAR.sh`.
   
 3. For the BFA evaluation, please refer the binarization case.
   
-  
-  
-##  License
-  
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-  
-The software is for educaitonal and academic research purpose only.
-  
+ 
