@@ -156,7 +156,6 @@ def time_string():
         time.strftime(ISOTIMEFORMAT, time.gmtime(time.time())))
     return string
 
-
 def convert_secs2time(epoch_time):
     need_hour = int(epoch_time / 3600)
     need_mins = int((epoch_time - 3600 * need_hour) / 60)
