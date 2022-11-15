@@ -141,6 +141,13 @@ def vanilla_resnet20(num_classes=10):
     model = CifarResNet(ResNetBasicblock, 20, num_classes)
     return model
 
+def vanilla_resnet18(num_classes=10):
+    """Constructs a ResNet-18 model for CIFAR-10 (by default)
+  Args:
+    num_classes (uint): number of classes
+  """
+    model = CifarResNet(ResNetBasicblock, 18, num_classes)
+    return model
 
 def vanilla_resnet32(num_classes=10):
     """Constructs a ResNet-32 model for CIFAR-10 (by default)
