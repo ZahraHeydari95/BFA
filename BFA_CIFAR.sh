@@ -25,7 +25,7 @@ model=resnet20_quan
 dataset=cifar10
 test_batch_size=128
 
-label_info=BFA_defense_test
+label_info=BFA_defense_test_binarized
 
 attack_sample_size=128 # number of data used for BFA
 n_iter=100 # number of iteration to perform BFA
@@ -35,7 +35,7 @@ save_path=./save/${DATE}/${dataset}_${model}_${label_info}
 tb_path=${save_path}/tb_log  #tensorboard log path
 
 # set the pretrained model path
-pretrained_model=/content/BFA/save/2022-11-14/cifar10_resnet20_quan_1_SGD_binarized/checkpoint.pth.tar
+pretrained_model=/content/BFA/save/2022-11-15/cifar10_resnet18_quan_10_SGD_binarized/checkpoint.pth.tar
 
 ############### Neural network ############################
 COUNTER=0
