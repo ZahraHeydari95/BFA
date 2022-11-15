@@ -21,14 +21,14 @@ cd ..
 
 ############### Configurations ########################
 enable_tb_display=false # enable tensorboard display
-model=resnet20_quan
+model=resnet18_quan
 dataset=cifar10
-epochs=1
+epochs=10
 train_batch_size=128
 test_batch_size=128
 optimizer=SGD
 
-label_info=binarized
+label_info=PC
 
 save_path=./save/${DATE}/${dataset}_${model}_${epochs}_${optimizer}_${label_info}
 tb_path=${save_path}/tb_log  #tensorboard log path
